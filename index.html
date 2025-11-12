@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#0a0e1a">
+  <title>Memory Match — 3D Flip</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="stats">
+      <button id="resetBtn" class="btn" type="button">↻ Reset</button>
+      <div class="pill"><strong>Moves:</strong> <span id="moves">0</span></div>
+      <div class="pill"><strong>Time:</strong> <span id="time">00:00</span></div>
+      <div class="pill"><strong>Pairs:</strong> <span id="pairs">0</span>/<span id="totalPairs">0</span></div>
+    </div>
+    <div class="controls">
+      <label>Pairs:
+        <select id="pairCount">
+          <option value="3">3</option>
+          <option value="6" selected>6</option>
+          <option value="9">9</option>
+          <option value="12">12</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <div id="grid" class="grid" aria-label="Memory cards"></div>
+  </main>
+
+  <dialog id="winDialog">
+    <h2>You Win! 🎉</h2>
+    <p><span id="finalMoves"></span> moves in <span id="finalTime"></span>.</p>
+    <div class="dialog-actions">
+      
+    <div id="artistCredits" class="credits" style="margin: 10px 0 14px; text-align: left;">
+      <strong>Artists who worked on this project</strong>
+      <ul style="list-style: none; padding: 6px 0 0; margin: 0;">
+        <li><a href="https://www.instagram.com/lera.is.drawing" target="_blank" rel="noopener">Lera Danchenko</a></li>
+        <li><a href="https://www.instagram.com/lera.is.drawing" target="_blank" rel="noopener">Lera Danchenko</a></li>
+        <li><a href="https://www.instagram.com/lera.is.drawing" target="_blank" rel="noopener">Lera Danchenko</a></li>
+        <li><a href="https://www.instagram.com/lera.is.drawing" target="_blank" rel="noopener">Lera Danchenko</a></li>
+        <li><a href="https://www.instagram.com/lera.is.drawing" target="_blank" rel="noopener">Lera Danchenko</a></li>
+        <li><a href="https://www.instagram.com/lera.is.drawing" target="_blank" rel="noopener">Lera Danchenko</a></li>
+      </ul>
+    </div>
+<button id="playAgain" class="btn" type="button">Play again</button>
+    </div>
+  </dialog>
+
+  <dialog id="matchFound">
+    <h2 id="matchMessage">You found a match</h2>
+    <div class="dialog-actions">
+      <button id="matchOk" class="btn" type="button">Ok</button>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
