@@ -132,8 +132,9 @@ function checkWin(){
     stopTimer();
     $("#finalMoves").textContent = state.moves;
     $("#finalTime").textContent = fmtTime(state.seconds);
-    dlg = $("#winDialog");
-    dialogMessage = `You win! Moves: ${state.moves}  Time: ${fmtTime(state.seconds)}`;
+    // Show the last match message first, then win dialog will be shown after matchOk is clicked
+    dlg = $("#matchFound");
+    dialogMessage = `You found a match`;
   } else {
     dlg = $("#matchFound");
     dialogMessage = `You found a match`;
@@ -165,6 +166,14 @@ function setup(){
   $("#matchOk").addEventListener("click", ()=>{
     const dlg = $("#matchFound");
     if(dlg && dlg.close) dlg.close();
+    // If game is complete, show win dialog after closing match dialog
+    const totalPairs = parseInt($("#totalPairs").textContent, 10);
+    if(state.matched === totalPairs){
+      setTimeout(() => {
+        const winDlg = $("#winDialog");
+        if(winDlg && winDlg.showModal) winDlg.showModal();
+      }, 100);
+    }
   });
 
 }
