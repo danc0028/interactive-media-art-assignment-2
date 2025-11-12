@@ -7,12 +7,12 @@ const PATHS = [
 ];
 
 const CARDS_MESSAGES = [
-  "I'm message one",
-  "I'm message two",
-  "I'm message three",
-  "I'm message four",
-  "I'm message five",
-  "I'm message six",
+  "Rising water temperatures are killing Pacific salmon during migration and reducing their spawning success.",
+  "Habitat degradation from coastal development and coral loss is forcing sharks out of their feeding and breeding areas.",
+  "Increasing ocean temperatures are causing coral bleaching, weakening reefs and threatening marine life.",
+  "Ocean acidification caused by global warming is weakening plankton shells and reducing their populations.",
+  "Warmer waters are forcing crabs to migrate to colder areas, disrupting ecosystems and fisheries.",
+  "Noise pollution from ships and industrial activities is disrupting whales communication and migration.",
   "I'm message seven",
   "I'm message eight",
   "I'm message nine",
